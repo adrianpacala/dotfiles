@@ -1,0 +1,8 @@
+*.swo
+*.swp
+*~
+.DS_Store
+.gem
+.idea
+.netrwhist
+.vscode

@@ -1,0 +1,27 @@
+[alias]
+	compactlog = log --graph --oneline --pretty=format:'%C(yellow)%h%Creset%Cred%d%Creset %s %Cgreen%an%Creset %C(cyan)%cd%Creset'
+[color]
+	ui = true
+[core]
+	attributesfile = ~/.gitattributes
+	editor = nvim
+	excludesfile = ~/.gitignore
+[credential]
+	helper = osxkeychain
+[diff]
+	compactionHeuristic = true
+	renames = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
+	required = true
+	smudge = git-lfs smudge -- %f
+[help]
+	autocorrect = 1
+[log]
+	date = auto:human
+[push]
+	default = simple
+[user]
+	email = adrianlukaszpacala@gmail.com
+	name = Adrian Pacała
