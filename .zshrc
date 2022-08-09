@@ -2,7 +2,7 @@ source $ZPLUG_HOME/init.zsh
 
 zplug "djui/alias-tips"
 zplug "mafredri/zsh-async", from:"github"
-# zplug "sindresorhus/pure", as:"theme", from:"github", use:"pure.zsh"
+zplug "zdharma/fast-syntax-highlighting"
 zplug "zplug/zplug", hook-build:"zplug --self-manage"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
@@ -63,6 +63,7 @@ alias gch="git checkout"
 alias gd="git diff"
 alias gdc="git diff --cached"
 alias gf="git commit --fixup"
+alias gl="git compactlog"
 alias gp="git pull"
 alias gpf="git push --force"
 alias gpr="git pull --rebase"
@@ -96,10 +97,6 @@ alias ya="yarn add"
 alias yr="yarn remove"
 alias yr="yarn run"
 
-clear-favicons() {
-  rm ~/Library/Application\ Support/Google/Chrome/Default/Favicons
-}
-
 docker-remove-all-containers() {
   docker rm $(docker ps --all=false --no-trunc --quiet=false)
 }
@@ -116,6 +113,16 @@ docker-remove-exited-containers() {
   docker rm $(docker ps --all=false --filter "status=exited" --no-trunc --quiet=false)
 }
 
+kp() {
+  local pid=$(ps -ef | sed 1d | eval "fzf ${FZF_DEFAULT_OPTS} -m --header='kill process'" | awk '{print $2}')
+
+  if [ "x$pid" != "x" ]
+  then
+    echo $pid | xargs kill -${1:-9}
+    kp
+  fi
+}
+
 short-prompt() {
 	export PS1="~"
 }
@@ -128,5 +135,3 @@ trust-puma() {
 eval "$(nodenv init -)"
 # eval "$(pyenv init -)"
 eval "$(rbenv init -)"
-
-# source ~/Library/Caches/heroku/autocomplete/zsh_setup

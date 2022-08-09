@@ -18,6 +18,8 @@
 	smudge = git-lfs smudge -- %f
 [help]
 	autocorrect = 1
+[init]
+	defaultBranch = main
 [log]
 	date = auto:human
 [push]
