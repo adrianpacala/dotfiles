@@ -1,15 +1,19 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'BurntSushi/ripgrep'
 Plug 'cocopon/iceberg.vim'
 Plug 'easymotion/vim-easymotion'
 " Plug 'ghifarit53/tokyonight-vim'
 Plug 'itchyny/lightline.vim'
 " Plug 'joshdick/onedark.vim'
-Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
+" Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 " Plug 'mcchrish/zenbones.nvim'
 Plug 'moll/vim-bbye'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'}
+Plug 'nvim-telescope/telescope.nvim'
 " Plug 'rktjmp/lush.nvim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
@@ -99,10 +103,23 @@ nnoremap <Leader>bw :Bwipeout<CR>
 nnoremap <Leader>ce :edit ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>cr :source ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>e :edit!<CR>
-nnoremap <Leader>fb :Buffers<CR>
-nnoremap <Leader>fc :Colors<CR>
-nnoremap <Leader>ff :Files<CR>
-nnoremap <Leader>fg :Rg<CR>
+" nnoremap <Leader>fb :Buffers<CR>
+" nnoremap <Leader>fc :Colors<CR>
+" nnoremap <Leader>ff :Files<CR>
+" nnoremap <Leader>fg :Rg<CR>
+nnoremap <Leader>fC <Cmd>Telescope colorscheme<CR>
+nnoremap <Leader>fb <Cmd>Telescope buffers<CR>
+nnoremap <Leader>fc <Cmd>Telescope commands<CR>
+nnoremap <Leader>ff <Cmd>Telescope find_files<CR>
+nnoremap <Leader>fg <Cmd>Telescope live_grep<CR>
+nnoremap <Leader>fgC <Cmd>Telescope git_bcommits<CR>
+nnoremap <Leader>fgS <Cmd>Telescope git_stash<CR>
+nnoremap <Leader>fgb <Cmd>Telescope git_branches<CR>
+nnoremap <Leader>fgc <Cmd>Telescope git_commits<CR>
+nnoremap <Leader>fgs <Cmd>Telescope git_status<CR>
+nnoremap <Leader>fh <Cmd>Telescope help_tags<CR>
+nnoremap <Leader>fhc <Cmd>Telescope command_history<CR>
+nnoremap <Leader>fhs <Cmd>Telescope search_history<CR>
 nnoremap <Leader>q :quit!<CR>
 nnoremap <Leader>sh :split<CR>
 nnoremap <Leader>sv :vsplit<CR>
