@@ -1,3 +1,6 @@
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+export ZPLUG_HOME="/usr/local/opt/zplug"
+
 source $ZPLUG_HOME/init.zsh
 
 zplug "djui/alias-tips"
@@ -130,8 +133,3 @@ short-prompt() {
 trust-puma() {
   security add-trusted-cert -k login.keychain-db ~/Library/Application\ Support/io.puma.dev/cert.pem
 }
-
-# eval "$(goenv init -)"
-eval "$(nodenv init -)"
-# eval "$(pyenv init -)"
-eval "$(rbenv init -)"
