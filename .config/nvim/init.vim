@@ -9,13 +9,16 @@ Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 " Plug 'mcchrish/zenbones.nvim'
+Plug 'moll/vim-bbye'
 " Plug 'rktjmp/lush.nvim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
+Plug 'vim-test/vim-test'
 
 call plug#end()
 
@@ -30,6 +33,8 @@ set splitbelow
 set splitright
 set tabstop=2
 set termguicolors
+
+nnoremap <SPACE> <Nop>
 
 " let g:airline_theme = 'gruvbox_material'
 let g:lightline = {'colorscheme': 'iceberg'}
@@ -54,7 +59,7 @@ let g:fzf_colors = {
 " let g:tokyonight_style = 'night'
 " let g:tokyonight_style = 'storm'
 " let g:tokyonight_enable_italic = 1
-let mapleader = ','
+let mapleader = ' '
 
 colorscheme iceberg
 
@@ -87,6 +92,10 @@ nnoremap <Leader>6 6gt
 nnoremap <Leader>7 7gt
 nnoremap <Leader>8 8gt
 nnoremap <Leader>9 9gt
+nnoremap <Leader>bd :Bdelete<CR>
+nnoremap <Leader>bn :bnext<CR>
+nnoremap <Leader>bp :bprevious<CR>
+nnoremap <Leader>bw :Bwipeout<CR>
 nnoremap <Leader>ce :edit ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>cr :source ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>e :edit!<CR>
@@ -97,6 +106,11 @@ nnoremap <Leader>fg :Rg<CR>
 nnoremap <Leader>q :quit!<CR>
 nnoremap <Leader>sh :split<CR>
 nnoremap <Leader>sv :vsplit<CR>
+nnoremap <Leader>tf :TestFile<CR>
+nnoremap <Leader>tl :TestLast<CR>
+nnoremap <Leader>tn :TestNearest<CR>
+nnoremap <Leader>ts :TestSuite<CR>
+nnoremap <Leader>tv :TestVisit<CR>
 nnoremap <Leader>w :write!<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <Tab> :bnext<CR>
