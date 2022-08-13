@@ -1,10 +1,28 @@
 [alias]
-	compactlog = log --graph --oneline --pretty=format:'%C(yellow)%h%Creset%Cred%d%Creset %s %Cgreen%an%Creset %C(cyan)%cd%Creset'
+	a = add
+	b = branch
+	c = commit
+	ca = commit --amend
+	cn = commit --amend --no-edit
+	d = diff
+	dc = diff --cached
+	e = rebase
+	f = commit --fixup
+	h = checkout
+	l = log
+	lc = log --graph --oneline --pretty=format:'%C(yellow)%h%Creset%Cred%d%Creset %s %Cgreen%an%Creset %C(cyan)%cd%Creset'
+	p = push
+	pf = push --force
+	r = restore
+	rs = restore --staged
+	s = status
+	u = pull
+	ur = push --rebase
 [color]
 	ui = true
 [core]
 	attributesfile = ~/.gitattributes
-	editor = nvim
+	editor = vimr --wait
 	excludesfile = ~/.gitignore
 [credential]
 	helper = osxkeychain
