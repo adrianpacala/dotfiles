@@ -8,7 +8,7 @@
 	dc = diff --cached
 	e = rebase
 	f = commit --fixup
-	h = checkout
+	k = checkout
 	l = log
 	lc = log --graph --oneline --pretty=format:'%C(yellow)%h%Creset%Cred%d%Creset %s %Cgreen%an%Creset %C(cyan)%cd%Creset'
 	p = push
@@ -16,13 +16,19 @@
 	r = restore
 	rs = restore --staged
 	s = status
+	t = stash
+	ta = stash apply
+	tc = stash clear
+	td = stash drop
+	tp = stash pop
+	ts = stash list
 	u = pull
-	ur = push --rebase
+	ur = pull --rebase
 [color]
 	ui = true
 [core]
 	attributesfile = ~/.gitattributes
-	editor = vimr --wait
+	editor = code-insiders --new-window --wait
 	excludesfile = ~/.gitignore
 [credential]
 	helper = osxkeychain
