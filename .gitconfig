@@ -48,6 +48,8 @@
 	date = auto:human
 [push]
 	default = simple
+[rebase]
+	autosquash = true
 [user]
 	email = adrianlukaszpacala@gmail.com
 	name = Adrian Pacała
