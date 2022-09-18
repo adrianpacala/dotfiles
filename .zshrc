@@ -1,4 +1,5 @@
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+export HOMEBREW_NO_ANALYTICS="1"
 export ZPLUG_HOME="/usr/local/opt/zplug"
 
 source $ZPLUG_HOME/init.zsh
