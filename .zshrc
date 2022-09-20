@@ -1,6 +1,6 @@
-export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
-export HOMEBREW_NO_ANALYTICS="1"
-export HOMEBREW_NO_ENV_HINTS="1"
+export HISTFILE="~/.zhistory"
+export HISTSIZE=999999
+export SAVEHIST=999999
 export ZPLUG_HOME=/opt/homebrew/opt/zplug
 
 source $ZPLUG_HOME/init.zsh
@@ -102,8 +102,6 @@ alias rt="bin/rails test"
 alias s="bin/rspec"
 alias t="trash"
 alias te="trash -sy"
-alias v="nvim"
-alias vim="nvim"
 alias y="yarn"
 alias ya="yarn add"
 alias yr="yarn run"
