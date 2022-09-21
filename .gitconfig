@@ -28,7 +28,7 @@
 	ui = true
 [core]
 	attributesfile = ~/.gitattributes
-	editor = code-insiders --new-window --wait
+	editor = code --new-window --wait
 	excludesfile = ~/.gitignore
 [credential]
 	helper = osxkeychain

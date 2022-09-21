@@ -1,4 +1,4 @@
-export EDITOR="code-insiders --new-window --wait"
+export EDITOR="code --new-window --wait"
 export FZF_DEFAULT_COMMAND="rg --files --hidden"
 export HOMEBREW_NO_ANALYTICS="1"
 export HOMEBREW_NO_ENV_HINTS="1"
