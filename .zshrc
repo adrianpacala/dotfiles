@@ -8,6 +8,7 @@ zplug "zdharma/fast-syntax-highlighting"
 zplug "zplug/zplug", hook-build:"zplug --self-manage"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-syntax-highlighting"
 
 zplug check || zplug install
@@ -26,6 +27,9 @@ promptinit
 eval "$(starship init zsh)"
 
 bindkey -e
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 unsetopt CORRECT_ALL
 unsetopt MENU_COMPLETE
