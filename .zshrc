@@ -22,8 +22,6 @@ colors
 compinit
 promptinit
 
-# prompt pure
-
 eval "$(starship init zsh)"
 
 bindkey -e
@@ -124,6 +122,10 @@ docker-remove-exited-containers() {
   docker rm $(docker ps --all=false --filter "status=exited" --no-trunc --quiet=false)
 }
 
+git-delete-merged-branches() {
+  git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
+}
+
 kp() {
   local pid=$(ps -ef | sed 1d | eval "fzf ${FZF_DEFAULT_OPTS} -m --header='kill process'" | awk '{print $2}')
 
@@ -135,7 +137,7 @@ kp() {
 }
 
 short-prompt() {
-	export PS1="~"
+	export PS1="$ "
 }
 
 trust-puma() {
