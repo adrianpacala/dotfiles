@@ -106,27 +106,11 @@ alias ya="yarn add"
 alias yr="yarn run"
 alias yrm="yarn remove"
 
-docker-remove-all-containers() {
-  docker rm $(docker ps --all=false --no-trunc --quiet=false)
-}
-
-docker-remove-all-images() {
-  docker rmi $(docker images --no-trunc --quiet=false)
-}
-
-docker-remove-dangling-images() {
-  docker rmi $(docker images --filter "dangling=true" --no-trunc --quiet=false)
-}
-
-docker-remove-exited-containers() {
-  docker rm $(docker ps --all=false --filter "status=exited" --no-trunc --quiet=false)
-}
-
 git-delete-merged-branches() {
-  git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
+  git branch --merged | egrep -v "(^\*|dev|main)" | xargs git branch -d
 }
 
-kp() {
+kill-process() {
   local pid=$(ps -ef | sed 1d | eval "fzf ${FZF_DEFAULT_OPTS} -m --header='kill process'" | awk '{print $2}')
 
   if [ "x$pid" != "x" ]
@@ -137,9 +121,5 @@ kp() {
 }
 
 short-prompt() {
-	export PS1="$ "
-}
-
-trust-puma() {
-  security add-trusted-cert -k login.keychain-db ~/Library/Application\ Support/io.puma.dev/cert.pem
+  export PS1="$ "
 }
