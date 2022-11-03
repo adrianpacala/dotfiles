@@ -3,27 +3,29 @@
 	b = branch
 	c = commit
 	ca = commit --amend
-	cn = commit --amend --no-edit
+	can = commit --amend --no-edit
+	cf = commit --fixup
+	ch = checkout
 	d = diff
 	dc = diff --cached
-	e = rebase
-	f = commit --fixup
-	k = checkout
 	l = log
 	lc = log --graph --oneline --pretty=format:'%C(yellow)%h%Creset%Cred%d%Creset %s %Cgreen%an%Creset %C(cyan)%cd%Creset'
 	p = push
 	pf = push --force
+	pl = pull
+	plr = pull --rebase
 	r = restore
+	rb = rebase
 	rs = restore --staged
 	s = status
-	t = stash
-	ta = stash apply
-	tc = stash clear
-	td = stash drop
-	tp = stash pop
-	ts = stash list
-	u = pull
-	ur = pull --rebase
+	sh = stash
+	sha = stash apply
+	shc = stash clear
+	shd = stash drop
+	shp = stash pop
+	shs = stash list
+	sw = switch
+	swc = switch --create
 [color]
 	ui = true
 [core]
