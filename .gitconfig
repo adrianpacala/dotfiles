@@ -9,7 +9,8 @@
 	d = diff
 	dc = diff --cached
 	l = log
-	lc = log --graph --oneline --pretty=format:'%C(yellow)%h%Creset%Cred%d%Creset %s %Cgreen%an%Creset %C(cyan)%cd%Creset'
+	lc = log-compact
+	log-compact = log --graph --oneline --pretty=format:'%C(yellow)%h%Creset%Cred%d%Creset %s %Cgreen%an%Creset %C(cyan)%cd%Creset'
 	p = push
 	pf = push --force
 	pl = pull
@@ -26,6 +27,8 @@
 	shs = stash list
 	sw = switch
 	swc = switch --create
+	w = wip
+	wip = commit --all --message="WIP"
 [color]
 	ui = true
 [core]
