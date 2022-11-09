@@ -56,6 +56,7 @@ setopt SHARE_HISTORY
 alias b="bundle"
 alias be="bundle exec"
 alias bi="bundle install"
+alias bo="bundle outdated"
 alias bu="bundle update"
 alias c="clear"
 alias cat="bat"
