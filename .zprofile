@@ -8,4 +8,5 @@ export CFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr
 export LDFLAGS="-L$(brew --prefix openssl)/lib"
 export PATH="$(brew --prefix postgresql@15)/bin:$(brew --prefix python)/libexec/bin${PATH+:$PATH}"
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+. $(brew --prefix asdf)/libexec/asdf.sh
+. "$HOME/.cargo/env"
