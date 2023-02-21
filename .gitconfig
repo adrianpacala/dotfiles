@@ -56,5 +56,5 @@
 [rebase]
 	autosquash = true
 [user]
-	email = pacala@protonmail.com
+	email = adrian@pacala.uk
 	name = Adrian Pacala
