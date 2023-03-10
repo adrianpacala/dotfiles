@@ -1,0 +1,71 @@
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+
+set ideajoin
+set incsearch
+set splitright
+set splitbelow
+
+nnoremap <SPACE> <Nop>
+
+let mapleader = ' '
+
+inoremap jj <Esc>
+inoremap jk <Esc>
+inoremap kj <Esc>
+inoremap kk <Esc>
+
+inoremap ,C :action DebugClass<CR>
+nnoremap ,R :action RunAnything<CR>
+nnoremap ,T :action RerunFailedTests<CR>
+nnoremap ,b :action ToggleLineBreakpoint<CR>
+nnoremap ,c :action RunClass<CR>
+nnoremap ,d :action Debug<CR>
+nnoremap ,p :action ParameterInfo<CR>
+nnoremap ,r :action Run<CR>
+nnoremap ,t :action RerunTests<CR>
+nnoremap <Leader>/ :nohlsearch<CR>
+nnoremap <Leader>RF :action RecentChangedFiles<CR>
+nnoremap <Leader>Rf :action RecentFiles<CR>
+nnoremap <Leader>Rl :action RecentLocations<CR>
+nnoremap <Leader>bb :action ShowBookmarks<CR>
+nnoremap <Leader>bt :action ToggleBookmark<CR>
+nnoremap <Leader>ff :action Find<CR>
+nnoremap <Leader>fp :action FindInPath<CR>
+nnoremap <Leader>fu :action FindUsages<CR>
+nnoremap <Leader>gE :action GotoPreviousError<CR>
+nnoremap <Leader>gS :action GotoSuperMethod<CR>
+nnoremap <Leader>ga :action GotoAction<CR>
+nnoremap <Leader>gc :action GotoClass<CR>
+nnoremap <Leader>ge :action GotoNextError<CR>
+nnoremap <Leader>gf :action GotoFile<CR>
+nnoremap <Leader>gg :action SearchEverywhere<CR>
+nnoremap <Leader>gi :action GotoImplementation<CR>
+nnoremap <Leader>gs :action GotoSymbol<CR>
+nnoremap <Leader>gt :action GotoTest<CR>
+nnoremap <Leader>h :action Back<CR>
+nnoremap <Leader>l :action Forward<CR>
+nnoremap <Leader>rr :action ReformatCode<CR>
+nnoremap <Leader>sU :action UnsplitAll<CR>
+nnoremap <Leader>sh :action SplitHorizontally<CR>
+nnoremap <Leader>sn :action NextSplitter<CR>
+nnoremap <Leader>sp :action PrevSplitter<CR>
+nnoremap <Leader>su :action Unsplit<CR>
+nnoremap <Leader>sv :action SplitVertically<CR>
+nnoremap <Leader>wt :action ActivateTerminalToolWindow<CR>
+nnoremap Q gqap
+nnoremap [c :action VcsShowPrevChangeMarker<CR>
+nnoremap [l :action MoveLineUp<CR>
+nnoremap [m :action MethodUp<CR>
+nnoremap [o :action PreviousOccurence<CR>
+nnoremap [s :action MoveStatementUp<CR>
+nnoremap [t :action PreviousTab<CR>
+nnoremap ]c :action VcsShowNextChangeMarker<CR>
+nnoremap ]l :action MoveLineDown<CR>
+nnoremap ]m :action MethodDown<CR>
+nnoremap ]o :action NextOccurence<CR>
+nnoremap ]s :action MoveStatementDown<CR>
+nnoremap ]t :action NextTab<CR>
+
+vnoremap Q gq
+
