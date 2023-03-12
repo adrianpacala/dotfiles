@@ -3,8 +3,6 @@ Plug 'tpope/vim-surround'
 
 set ideajoin
 set incsearch
-set splitright
-set splitbelow
 
 nnoremap <SPACE> <Nop>
 
@@ -15,7 +13,7 @@ inoremap jk <Esc>
 inoremap kj <Esc>
 inoremap kk <Esc>
 
-inoremap ,C :action DebugClass<CR>
+nnoremap ,C :action DebugClass<CR>
 nnoremap ,R :action RunAnything<CR>
 nnoremap ,T :action RerunFailedTests<CR>
 nnoremap ,b :action ToggleLineBreakpoint<CR>
@@ -25,6 +23,8 @@ nnoremap ,p :action ParameterInfo<CR>
 nnoremap ,r :action Run<CR>
 nnoremap ,t :action RerunTests<CR>
 nnoremap <Leader>/ :nohlsearch<CR>
+nnoremap <Leader><Leader> :action Switcher<CR>
+nnoremap <Leader>Q :action QuickJavaDoc<CR>
 nnoremap <Leader>RF :action RecentChangedFiles<CR>
 nnoremap <Leader>Rf :action RecentFiles<CR>
 nnoremap <Leader>Rl :action RecentLocations<CR>
