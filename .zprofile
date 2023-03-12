@@ -1,4 +1,4 @@
-export HISTFILE="~/.zhistory"
+export HISTFILE=$HOME/.zhistory
 export HISTSIZE=999999
 export SAVEHIST=999999
 
@@ -6,7 +6,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export CFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include"
 export LDFLAGS="-L$(brew --prefix openssl)/lib"
-export PATH="/usr/local/share/dotnet/sdk:$(brew --prefix postgresql@15)/bin:$(brew --prefix python)/libexec/bin${PATH+:$PATH}"
+export PATH="$(brew --prefix postgresql@15)/bin:$(brew --prefix python)/libexec/bin${PATH+:$PATH}"
 
 . $(brew --prefix asdf)/libexec/asdf.sh
-. "$HOME/.cargo/env"
+. $HOME/.asdf/plugins/dotnet/set-dotnet-env.zsh
+. $HOME/.cargo/env
