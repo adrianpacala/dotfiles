@@ -1,3 +1,6 @@
+export HISTFILE=$HOME/.zsh_history
+export HISTSIZE=999999
+export SAVEHIST=999999
 export ZPLUG_HOME=/opt/homebrew/opt/zplug
 
 source $ZPLUG_HOME/init.zsh
@@ -58,6 +61,7 @@ alias b="bundle"
 alias be="bundle exec"
 alias bi="bundle install"
 alias bo="bundle outdated"
+alias brew-x86_64="arch -x86_64 /usr/local/Homebrew/bin/brew"
 alias bu="bundle update"
 alias c="clear"
 alias cat="bat"
