@@ -9,5 +9,4 @@ export LDFLAGS="-L$(brew --prefix openssl)/lib"
 export PATH="$(brew --prefix postgresql@15)/bin:$(brew --prefix python)/libexec/bin${PATH+:$PATH}"
 
 . $(brew --prefix asdf)/libexec/asdf.sh
-. $HOME/.asdf/plugins/dotnet/set-dotnet-env.zsh
 . $HOME/.cargo/env
