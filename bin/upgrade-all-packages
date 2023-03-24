@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+set -e
+set -u
+set -o pipefail
+
+brew-x86_64() {
+  arch -x86_64 /usr/local/Homebrew/bin/brew "$@"
+}
+
+brew update
+brew upgrade
+brew cleanup
+brew services restart --all
+
+brew-x86_64 update
+brew-x86_64 upgrade
+brew-x86_64 cleanup
+
+#asdf install dotnet latest
+arch -x86_64 asdf install dotnet latest
+asdf install nodejs latest
+asdf install python latest
+asdf install ruby latest
+
+asdf global dotnet latest
+asdf global nodejs latest
+asdf global python latest
+asdf global ruby latest

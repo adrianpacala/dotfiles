@@ -114,13 +114,6 @@ alias ya="yarn add"
 alias yr="yarn run"
 alias yrm="yarn remove"
 
-upgrade-everything() {
-  brew update && brew upgrade && brew cleanup && brew services restart --all
-  brew-x86_64 update && brew-x86_64 upgrade && brew-x86_64 cleanup
-  asdf install nodejs latest && asdf install python latest && asdf install ruby latest
-  asdf global nodejs latest && asdf global python latest && asdf global ruby latest
-}
-
 git-delete-merged-branches() {
   git branch --merged | egrep -v "(^\*|dev|main)" | xargs git branch -d
 }
