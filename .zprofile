@@ -1,6 +1,7 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export CFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include"
+export DOTNET_CLI_TELEMETRY_OPTOUT="1"
 export EDITOR="code --new-window --wait"
 export FZF_DEFAULT_COMMAND="rg --files --hidden"
 export HOMEBREW_NO_ANALYTICS="1"
