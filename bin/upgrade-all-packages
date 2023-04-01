@@ -11,13 +11,11 @@ brew-x86_64() {
 brew update
 brew upgrade
 brew cleanup
-#brew services restart --all
 
 brew-x86_64 update
 brew-x86_64 upgrade
 brew-x86_64 cleanup
 
-#asdf install dotnet latest
 arch -x86_64 asdf install dotnet latest
 asdf install nodejs latest
 asdf install python latest

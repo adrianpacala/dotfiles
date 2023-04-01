@@ -7,6 +7,7 @@ export FZF_DEFAULT_COMMAND="rg --files --hidden"
 export HOMEBREW_NO_ANALYTICS="1"
 export HOMEBREW_NO_ENV_HINTS="1"
 export LDFLAGS="-L$(brew --prefix openssl)/lib"
+export MGFXC_WINE_PATH=/Users/adrianpacala/.winemonogame
 export PATH="$HOME/bin:$HOME/Library/Application Support/JetBrains/Toolbox/scripts:$(brew --prefix postgresql@15)/bin:$(brew --prefix python)/libexec/bin${PATH+:$PATH}"
 
 . $(brew --prefix asdf)/libexec/asdf.sh
