@@ -114,6 +114,10 @@ alias ya="yarn add"
 alias yr="yarn run"
 alias yrm="yarn remove"
 
+clean-screenshots() {
+  rm $HOME/Screenshots/*.png
+}
+
 git-delete-merged-branches() {
   git branch --merged | egrep -v "(^\*|dev|main)" | xargs git branch -d
 }
