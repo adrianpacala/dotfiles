@@ -115,6 +115,11 @@ alias ya="yarn add"
 alias yr="yarn run"
 alias yrm="yarn remove"
 
+clean-downloads() {
+  setopt localoptions rmstarsilent
+  rm -f $HOME/Downloads/*
+}
+
 clean-screenshots() {
   rm -f $HOME/Screenshots/*.png
 }
