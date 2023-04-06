@@ -109,13 +109,14 @@ alias rt="bin/rails test"
 alias s="bin/rspec"
 alias t="trash"
 alias te="trash -sy"
+alias vim="nvim"
 alias y="yarn"
 alias ya="yarn add"
 alias yr="yarn run"
 alias yrm="yarn remove"
 
 clean-screenshots() {
-  rm $HOME/Screenshots/*.png
+  rm -f $HOME/Screenshots/*.png
 }
 
 git-delete-merged-branches() {
