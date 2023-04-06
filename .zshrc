@@ -116,12 +116,11 @@ alias yr="yarn run"
 alias yrm="yarn remove"
 
 clean-downloads() {
-  setopt localoptions rmstarsilent
-  rm -f $HOME/Downloads/*
+  trash -v $HOME/Downloads/*
 }
 
 clean-screenshots() {
-  rm -f $HOME/Screenshots/*.png
+  trash -v $HOME/Screenshots/*.png
 }
 
 git-delete-merged-branches() {
