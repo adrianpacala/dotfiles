@@ -115,12 +115,8 @@ alias ya="yarn add"
 alias yr="yarn run"
 alias yrm="yarn remove"
 
-clean-downloads() {
-  trash -v $HOME/Downloads/*
-}
-
-clean-screenshots() {
-  trash -v $HOME/Screenshots/*.png
+clean-files() {
+  trash -v $HOME/Downloads/* $HOME/Screenshots/* 2>/dev/null || true
 }
 
 git-delete-merged-branches() {
