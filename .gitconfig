@@ -33,7 +33,7 @@
 	ui = true
 [core]
 	attributesfile = ~/.gitattributes
-	editor = code --new-window --wait
+	editor = nvim
 	excludesfile = ~/.gitignore
 [credential]
 	helper = osxkeychain
