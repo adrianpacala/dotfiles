@@ -16,7 +16,7 @@ brew-x86_64 update
 brew-x86_64 upgrade
 brew-x86_64 cleanup
 
-arch -x86_64 asdf install dotnet latest
+asdf install dotnet latest
 asdf install nodejs latest
 asdf install python latest
 asdf install ruby latest
