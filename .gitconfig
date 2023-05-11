@@ -3,40 +3,36 @@
 	b = branch
 	c = commit
 	ca = commit --amend
-	can = commit --amend --no-edit
+	cane = commit --amend --no-edit
 	cf = commit --fixup
 	ch = checkout
+	cw = commit --all --message="WIP"
 	d = diff
 	dc = diff --cached
 	l = log
-	lc = log-compact
-	log-compact = log --graph --oneline --pretty=format:'%C(yellow)%h%Creset%Cred%d%Creset %s %Cgreen%an%Creset %C(cyan)%cd%Creset'
+	lc = log --graph --oneline --pretty=format:'%C(yellow)%h%Creset%Cred%d%Creset %s %Cgreen%an%Creset %C(cyan)%cd%Creset'
 	p = push
 	pf = push --force
 	pl = pull
 	plr = pull --rebase
-	r = restore
-	rb = rebase
-	rs = restore --staged
+	r = rebase
+	re = restore
+	res = restore --staged
 	s = status
-	sh = stash
-	sha = stash apply
-	shc = stash clear
-	shd = stash drop
-	shp = stash pop
-	shs = stash list
+	st = stash
+	sta = stash apply
+	stc = stash clear
+	std = stash drop
+	stp = stash pop
+	sts = stash list
 	sw = switch
 	swc = switch --create
-	w = wip
-	wip = commit --all --message="WIP"
 [color]
 	ui = true
 [core]
 	attributesfile = ~/.gitattributes
-	editor = nvim
+	editor = code --new-window --wait
 	excludesfile = ~/.gitignore
-[credential]
-	helper = osxkeychain
 [diff]
 	compactionHeuristic = true
 	renames = true
