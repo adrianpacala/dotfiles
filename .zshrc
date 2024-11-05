@@ -27,6 +27,7 @@ compinit
 promptinit
 
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 bindkey -e
 
@@ -60,6 +61,7 @@ setopt SHARE_HISTORY
 alias b="bat"
 alias c="clear"
 alias g="git"
+alias j="zellij"
 alias l="lsd --all --long"
 alias lt="lsd --all --long --tree"
 alias n="nvim"
