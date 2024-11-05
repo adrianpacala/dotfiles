@@ -57,34 +57,12 @@ setopt INTERACTIVE_COMMENTS
 setopt NO_BEEP
 setopt SHARE_HISTORY
 
+alias b="bat"
 alias c="clear"
-alias cat="bat"
 alias g="git"
 alias l="lsd --all --long"
-alias ls="lsd --all --long"
 alias lt="lsd --all --long --tree"
+alias n="nvim"
 alias t="trash"
 alias te="trash -sy"
 alias vim="nvim"
-
-clean-files() {
-  trash -v $HOME/Downloads/* $HOME/Screenshots/* 2>/dev/null || true
-}
-
-git-delete-merged-branches() {
-  git branch --merged | egrep -v "(^\*|dev|main)" | xargs git branch -d
-}
-
-kill-process() {
-  local pid=$(ps -ef | sed 1d | eval "fzf ${FZF_DEFAULT_OPTS} -m --header='kill process'" | awk '{print $2}')
-
-  if [ "x$pid" != "x" ]
-  then
-    echo $pid | xargs kill -${1:-9}
-    kp
-  fi
-}
-
-short-prompt() {
-  export PS1="$ "
-}
