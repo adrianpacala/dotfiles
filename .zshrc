@@ -7,7 +7,7 @@ source $ZPLUG_HOME/init.zsh
 
 zplug "djui/alias-tips"
 zplug "mafredri/zsh-async", from:"github"
-zplug "zdharma/fast-syntax-highlighting"
+zplug "z-shell/F-Sy-H"
 zplug "zplug/zplug", hook-build:"zplug --self-manage"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
@@ -57,7 +57,6 @@ setopt INTERACTIVE_COMMENTS
 setopt NO_BEEP
 setopt SHARE_HISTORY
 
-alias brew-x86_64="arch -x86_64 /usr/local/Homebrew/bin/brew"
 alias c="clear"
 alias cat="bat"
 alias g="git"
