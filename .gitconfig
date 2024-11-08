@@ -18,13 +18,14 @@
 	k = checkout
 	l = log
 	p = push
-	pf = push --force
+	pf = push -f
 	r = rebase
 	s = status
 	u = pull
-	ur = pull --rebase
+	ur = pull -r
 	w = switch
-	wc = switch --create
+	wc = switch -c
+	wip = commit -am "WIP"
 [color]
 	ui = true
 [core]
