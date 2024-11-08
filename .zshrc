@@ -6,8 +6,6 @@ export ZPLUG_HOME=/opt/homebrew/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 zplug "djui/alias-tips"
-zplug "mafredri/zsh-async", from:"github"
-zplug "z-shell/F-Sy-H"
 zplug "zplug/zplug", hook-build:"zplug --self-manage"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
