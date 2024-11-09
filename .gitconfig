@@ -25,7 +25,8 @@
 	ur = pull -r
 	w = switch
 	wc = switch -c
-	wip = commit -am "WIP"
+	wip = commit -m "WIP"
+	wipa = commit -am "WIP"
 [color]
 	ui = true
 [core]
