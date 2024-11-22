@@ -7,6 +7,7 @@ brew "curl"
 brew "gdu"
 brew "git"
 brew "git-lfs"
+brew "readline"
 brew "gnupg"
 brew "hivemind"
 brew "lazydocker"
@@ -17,7 +18,6 @@ brew "mas"
 brew "mise"
 brew "neovim"
 brew "postgresql@17", restart_service: true
-brew "readline"
 brew "ripgrep"
 brew "starship"
 brew "trash"
@@ -49,6 +49,8 @@ cask "kitty"
 cask "linearmouse"
 cask "logi-options+"
 cask "logitech-g-hub"
+cask "messenger"
+cask "netnewswire"
 cask "obs"
 cask "obsidian"
 cask "openvpn-connect"
@@ -59,13 +61,16 @@ cask "vivaldi"
 cask "whatsapp"
 
 mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
 mas "Numbers", id: 409203825
+mas "N₁₀", id: 6446053304
 mas "Pages", id: 409201541
+mas "Tomito", id: 1526042938
 mas "Unsplash Wallpapers", id: 1284863847
 mas "WireGuard", id: 1451685025
-mas "iMovie", id: 408981434
+mas "Xcode", id: 497799835
 
 vscode "4ops.packer"
 vscode "ban.spellright"
