@@ -57,12 +57,13 @@ setopt NO_BEEP
 setopt SHARE_HISTORY
 
 alias b="bat"
+alias bp="bat -p"
 alias c="clear"
 alias g="git"
 alias j="zellij"
-alias l="lsd --all --long"
-alias lt="lsd --all --long --tree"
+alias l="lsd -al"
+alias lt="lsd -al --tree"
 alias n="nvim"
 alias t="trash"
-alias te="trash -sy"
+alias ts="trash -sy"
 alias vim="nvim"
